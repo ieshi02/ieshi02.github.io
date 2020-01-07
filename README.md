@@ -1,6 +1,6 @@
 # ieshi02.github.io
 my C# &amp; python code in here, hello world!
-<!DOCTYPE html>
+
 <html>
 <body>
 <h1>我的JAVASCRIPT程序</h1>
