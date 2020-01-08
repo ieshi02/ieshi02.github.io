@@ -1,7 +1,7 @@
-# ieshi02.github.io
-my C# &amp; python code in here, hello world!
-
 # 2020 1 8
-打算用github做一个个人网页，不过发现这个网站不是那么容易使用，很多地方需要探索，连最基本的上传图片都还不会。
+<p>打算用github做一个个人网页，不过发现这个网站不是那么容易使用，很多地方需要探索，连最基本的上传图片都还不会。</p>
 ![image](https://github.com/ieshi02/ieshi02.github.io/blob/master/img/psb.jpg)
-this is my first image public in github, so ex!
+<p>this is my first image public in github, so ex!</p>
+<p>也不知道是怎么回事，github上传图片即使50KB都上传不了，看来想发布一些东西也不是那么简单的事情，好在发布文字还是不错的，不过汉字始终不是被那么多的人所认识，汉字实在太复杂了，可能使用英文要更好一些。</p>
+<p>ieshi writer</p>
+
