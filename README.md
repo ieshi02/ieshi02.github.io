@@ -1,21 +1,5 @@
 # ieshi02.github.io
 my C# &amp; python code in here, hello world!
 
-<html>
-<body>
-<h1>我的JAVASCRIPT程序</h1>
-<p id="demo">我的第一个段落</p>
-<button onclick="myFunction()">点我</button>
-
-<script>
-document.getElementById("demo").innerHTML = "段落已修改。";
-document.write(Date());
-
-function myFunction() {
-   	document.getElementById("demo").innerHTML = Date();
-}
-</script>
-
-</body>
-</html>
-
+# 2020 1 8
+打算用github做一个个人网页，不过发现这个网站不是那么容易使用，很多地方需要探索，连最基本的上传图片都还不会。
