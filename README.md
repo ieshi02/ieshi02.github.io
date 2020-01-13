@@ -9,3 +9,5 @@ ieshi writer
 #2020 1 9
 
 Today I finally went to the hospital to have my molar removed because it was broken. Originally, I had root canal treatment in the hospital before, and I needed to make porcelain teeth in two weeks. Because I was lazy and my teeth didn't hurt any more, I didn't do it. As a result, my teeth were broken and I couldn't make porcelain teeth any more, so I had to pull them out and implant it. It was a big lesson for me that I shouldn't have put it off until it was too late to regret it and the teeth was eventually pulled out.
+
+<a href = "https://github.com/ieshi02/ieshi02.github.io/blob/master/text/P1.md">2020 1 13</a>
