@@ -1,13 +1,9 @@
-# 2020 1 8
+# Ieshi's Markdown
+It's very good that I can build my personal website here, but it's too hard to build a website in China. There are too many regulations. OK, I will record my thoughts. Although no one is watching, I will take my time. As some people say, as long as I can write it down, the problem will be solved in half.
+
 ![image](https://github.com/ieshi02/ieshi02.github.io/blob/master/img/psb.jpg)
-打算用github做一个个人网页，不过发现这个网站不是那么容易使用，很多地方需要探索，连最基本的上传图片都还不会。
 
-也不知道是怎么回事，github上传图片即使50KB都上传不了，看来想发布一些东西也不是那么简单的事情，好在发布文字还是不错的，不过汉字始终不是被那么多的人所认识，汉字实在太复杂了，可能使用英文要更好一些。
+とても良いです。ここで私の個人サイトを作ることができます。中国でウェブサイトを作るのは本当に難しいです。監督が多すぎます。いいです。私は私の考えを記録します。誰も見ていませんが、ゆっくりします。ある人が言っているように、書きさえすれば、問題は半分解決します。
 
-ieshi writer
-
-#2020 1 9
-
+## 2020 1 9
 Today I finally went to the hospital to have my molar removed because it was broken. Originally, I had root canal treatment in the hospital before, and I needed to make porcelain teeth in two weeks. Because I was lazy and my teeth didn't hurt any more, I didn't do it. As a result, my teeth were broken and I couldn't make porcelain teeth any more, so I had to pull them out and implant it. It was a big lesson for me that I shouldn't have put it off until it was too late to regret it and the teeth was eventually pulled out.
-
-<a href = "https://github.com/ieshi02/ieshi02.github.io/blob/master/text/P1.md">2020 1 13</a>
