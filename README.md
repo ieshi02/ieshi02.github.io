@@ -17,3 +17,5 @@ The main reason why the KMT lost this election was because of disunity, just as 
 Some people say that the Chinese government represents dictatorship, which is wrong. On the contrary, every Party member of the Communist Party of China can only be elected, and every policy needs complex research and full investigation of everyone's requirements before it can be put into trial operation in a small area. If it works, it will be promoted to the whole country, so as to ensure that every policy is feasible In short, it is a typical method of scientific experiment, which is written into the party constitution of the Communist Party of China. Therefore, Chinese political parties do not believe in God, but in the spirit of science.
 
 Maybe in some people's eyes, not believing in God is evil, but it should be clear that there are not only gods, but also many other gods. The gods of every culture should respect each other, shouldn't they?
+
+[anteresting websites](http://quora123.com/)
