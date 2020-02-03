@@ -9,8 +9,14 @@ It's very good that I can build my personal website here, but it's too hard to b
 
 とても良いです。ここで私の個人サイトを作ることができます。中国でウェブサイトを作るのは本当に難しいです。監督が多すぎます。いいです。私は私の考えを記録します。誰も見ていませんが、ゆっくりします。ある人が言っているように、書きさえすれば、問題は半分解決します。
 
-## 2020 1 9
-Today I finally went to the hospital to have my molar removed because it was broken. Originally, I had root canal treatment in the hospital before, and I needed to make porcelain teeth in two weeks. Because I was lazy and my teeth didn't hurt any more, I didn't do it. As a result, my teeth were broken and I couldn't make porcelain teeth any more, so I had to pull them out and implant it. It was a big lesson for me that I shouldn't have put it off until it was too late to regret it and the teeth was eventually pulled out.
+## 2020 2 3
+  __最近一段时间在家里，因为有新型冠状病毒的影响，我觉得真是自由的太过分才会出现这个事情，吃什么不好非要吃蝙蝠，野生动物就那么好吃吗？难道是因为中国人太穷了只能吃野生动物吗？恰恰相反，因为野生动物的价格是普通食物价格的几十倍甚至上百倍，吃它们的人仅仅是为了满足所谓的“面子”，因为野生动物是昂贵的食材，而且不好搞到。我也真是晕了。这次出现这个病毒实际上就是老天爷给这些人警告，人类就应该老老实实吃自己该吃的东西，又不是因为饥饿，如果只是为了自己的贪欲，真是不值得同情，可惜现在这个病毒竟然要整个中国来为他们买单，真是气愤！
+  
+  __我们的国家确实变得富有了，正是这些财富却带来了病毒，自作自受！
+  
+  __好在我们的社会制度在解决灾难问题上面具有极大的优越性，虽然也暴露出红十字方面的问题，相信这个问题会解决，一切都会过去，当一切都过去的时候，我会去我熟悉的食店吃一份我最喜欢的牛排。
+  
+  __天佑中华。
 
 ## 2020 1 13
 
@@ -22,3 +28,5 @@ Some people say that the Chinese government represents dictatorship, which is wr
 
 Maybe in some people's eyes, not believing in God is evil, but it should be clear that there are not only gods, but also many other gods. The gods of every culture should respect each other, shouldn't they?
 
+## 2020 1 9
+Today I finally went to the hospital to have my molar removed because it was broken. Originally, I had root canal treatment in the hospital before, and I needed to make porcelain teeth in two weeks. Because I was lazy and my teeth didn't hurt any more, I didn't do it. As a result, my teeth were broken and I couldn't make porcelain teeth any more, so I had to pull them out and implant it. It was a big lesson for me that I shouldn't have put it off until it was too late to regret it and the teeth was eventually pulled out.
