@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="UTF-8">  
+	   <title>建立本地数据库</title> 
+      <script type="text/javascript">
+      
+         var db = openDatabase('ielocaldb', '1.0', 'ielocaldb', 2 * 1024 * 1024);
+         var msg;
+         
+         db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS MEMO1 (id unique, title, date1, memo1)');
+            tx.executeSql('INSERT INTO MEMO1 (id, title, date1, memo1) VALUES (1, "欢迎", "2020-5-8", "欢迎使用这个记事本，这是一个基于H5的本地数据库，使用HTML作为页面，是黄浩在Mac的环境下开发的，可以实现只用一个HTML页面就实现所有界面。见到此页面说明数据库已经初始化完毕，请点击mainapp.html文件开始使用本系统。本系统版权归黄浩所有，如需使用本程序的代码，请注明出处。如果需要导出数据库，请使用everything搜索databases目录，在其中的file_0目录里面即为sqlite数据库，直接复制出来就可以使用。")');
+            //tx.executeSql('INSERT INTO MEMO1 (id, title, date1, memo1) VALUES (2, "测试数据2", "2020-5-8", "不知道是否可行，可惜无法将数据导出来。")');
+            msg = '<p>数据表已创建，且插入了一条数据。请点击mainapp.html文件开始使用本系统。</p>';
+            document.querySelector('#status').innerHTML =  msg;
+         });
+         
+      </script>
+      
+   </head>
+   
+   <body>
+      <div id="status" name="status">状态信息</div>
+   </body>
+   
+</html>
