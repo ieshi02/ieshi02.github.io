@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="UTF-8">  
+	   <title>基于HTML5+WebSQL技术的记事本1.00</title> 
+      <script type="text/javascript">
+      
+         var db = openDatabase('ielocaldb', '1.0', 'ielocaldb', 2 * 1024 * 1024);
+         var msg;
+
+         function discontent(){
+            //清除所有内容
+            document.querySelector('#status').innerHTML = "";
+            db.transaction(function (tx) {
+               tx.executeSql('SELECT * FROM MEMO1 ORDER BY id DESC', [], function (tx, results) {
+               
+                  var len = results.rows.length, i;
+                  //msg = "<p>查询记录条数: " + len + "</p>";
+                  //document.querySelector('#status').innerHTML +=  msg;
+                   	msg = "<center><h2>基于HTML5+WebSQL技术的记事本</h2></center>";
+                  	msg = msg + '<h5><button type="button" style="float:right; margin: -25px 20px" onclick="addthis()">点击这里开始新的记录</button></h5>'; 
+
+                  for (i = 0; i < len; i++){                	    
+                    msg = msg + "<hr><h3>" + results.rows.item(i).title + "</h3>";
+                    msg = msg + '<div style="text-indent:2em"><p>' + results.rows.item(i).memo1 + '</p>';
+                    msg = msg + "<h5>" + results.rows.item(i).date1 + "";
+                    msg = msg + '<button type="button" style="float:right" onclick="dellthis('+results.rows.item(i).id+')">删除这条记录</button><button type="button" style="float:right" onclick="editthis('+results.rows.item(i).id+')">编辑这条记录</button></h5></div>';
+                    }
+
+                    document.querySelector('#status').innerHTML +=  msg;
+                  
+               }, null);
+            });
+         }
+
+         function quitedit(){
+         	if(confirm('是否退出而不保存？')){
+         		discontent();
+         	}
+         }
+
+         function addthis(){
+			//清除所有内容
+            document.querySelector('#status').innerHTML = "";
+            msg = '<h2><div id="status" name="status" style="margin: 0px 400px" >写笔记</div></h2>';
+            msg += '<p>标题： <input type="text" name="title" id="title" maxlength=“250” style="width:800px;font-size:20px;"/></p>';   
+            msg += '<p>日期： <input type="text" name="date1" id="date1"/></p>';
+            msg += '<p>图片： <input type="text" name="img1" id="img1" style="width:800px"/></p>';
+            msg += '<p>内容： <textarea rows="10" cols="30" name="memo1" id="memo1" style="width:800px;height: 500px;vertical-align:top;font-size:18px;"></textarea></p>';
+            msg += '<h5><p style="margin: 0px 50px">加入图片的代码： &lt;p/&gt;&lt;img src=地址不加引号 height=800 width=800 /&gt;&lt;/p&gt;</p></h5>';
+            msg += '<input type="hidden" name="newid1" id="newid1"/>';
+            msg += '<div style="margin: 0px 360px"><button type="button" onclick="quitedit()" style="width: 80px">退出 Quit</button><button type="button" onclick="add()" style="width: 80px">保存 Save</button></div><br><br>';
+
+
+      		//获取当前时间
+      		var date = new Date();
+      		var year = date.getFullYear();
+      		var month = date.getMonth() + 1;
+      		var day = date.getDate();
+      		var time = year + '-' + month + '-' + day;
+      		var newid = 0;
+      		//var db = openDatabase('ielocaldb', '1.0', 'ielocaldb', 2 * 1024 * 1024);
+
+      		document.querySelector('#status').innerHTML = msg;
+      		document.getElementById('date1').value = '' + time;
+   	 		document.getElementById('title').focus();
+		 	   document.getElementById('title').select();
+
+		 	   db.transaction(function (tx) {	
+            		//首先要取最近的id号
+            	tx.executeSql('SELECT id FROM MEMO1 ORDER BY id DESC LIMIT 1', [], function (tx, results) {
+            		if(results.rows.length > 0){
+            			var id1 = results.rows.item(0).id;
+            			newid = parseInt(id1) + 1;
+            			alert('调试信息：即将要添加的是第' + newid + '号信息。');
+            		}else{
+            			newid = 1;
+            		}
+
+            		document.getElementById('newid1').value = newid.toString();
+
+               	}, null);
+            });
+
+
+
+         }
+
+         function add(){
+
+         	var title = document.getElementById('title').value;
+         	var date1 = document.getElementById('date1').value;
+         	var img1 = document.getElementById('img1').value;
+         	var memo1 = document.getElementById('memo1').value;
+         	var newid = document.getElementById('newid1').value;
+         	//如果有图片就自动加到文本后面
+         	if(img1 != ''){
+         		memo1 = '<p>' + memo1 + '</p>\n<p><img src=' + img1 + ' width=800 /></p>';
+         		//memo1 = memo1 + '<br><img src=' + img1 + ' width=800 />';
+         	}
+
+
+         	//如果两个都不为空
+         	if(title == '' || memo1 ==''){
+				alert('标题和内容不能为空');
+         	}else{
+         		//document.querySelector('#status').innerHTML =  'hello  ' + document.getElementById('title').value + document.getElementById('memo1').value;
+         		
+            	
+
+            	db.transaction(function (tx) {	
+            	//内容填入数据库
+					var sql = 'INSERT INTO MEMO1 (id, title, date1, memo1) VALUES ('+newid+', "'+title+'", "'+date1+'", "'+memo1+'")';
+					//alert(sql);
+            		tx.executeSql(sql);
+            		msg = '调试信息：成功插入了第'+newid+'号信息。';
+                  alert(msg);
+                  discontent();
+                  //sucessd!
+
+            	});
+
+         	}
+
+         }
+
+
+         function dellthis(id1){
+            //alert(id1);
+            //删除这条记录
+
+            if(confirm('是否要删除此项记录？')){
+            	db.transaction(function (tx) {
+               		tx.executeSql('DELETE FROM MEMO1 WHERE id='+id1);
+            	});
+            	alert('调试信息：记录已经删除！');
+            	discontent();
+            }
+
+            
+         }
+
+         function editthis(id2){
+            //alert(id2);
+            var memo2 = '';
+            //首先要取当前记录的值
+            db.transaction(function (tx) {   
+               tx.executeSql('SELECT memo1 FROM MEMO1 WHERE id =' + id2.toString(), [], function (tx, results) {
+                  /*if(results.rows.length > 0){
+                     var id1 = results.rows.item(0).id;
+                     newid = parseInt(id1) + 1;
+                     alert('调试信息：即将要添加的是第' + newid + '号信息。');
+                  }else{
+                     newid = 1;
+                  }*/
+
+                  //妈逼，值竟然传不出去，立马是什么原因啊。这个东西真是难用啊。坑实在太多了，我做这个有什么用啊？
+                  memo2 = results.rows.item(0).memo1;
+                  //alert(memo2);
+                  msg = '<h2><div id="status" name="status" style="margin: 0px 400px" >修改内容</div></h2>';
+                  msg += '<p>内容： <textarea rows="10" cols="30" name="memo1" id="memo1" style="width:800px;height: 650px;vertical-align:top;font-size:18px;">' + memo2 + '</textarea></p>';
+
+                  msg += '<div style="margin: 0px 360px"><button type="button" onclick="quitedit()" style="width: 80px">退出 Quit</button><button type="button" style="width: 80px" onclick="updatethis(' + id2.toString() + ')" >保存 Save</button></div><br><br>';
+                  document.querySelector('#status').innerHTML = msg;
+
+                  }, null);
+            });
+
+            
+         }
+
+         function updatethis(id3){
+            var memo1 = document.getElementById('memo1').value;
+            //alert(id3.toString()+memo1);
+            db.transaction(function (tx) {
+               tx.executeSql('UPDATE MEMO1 SET memo1=\'' + memo1+ '\' WHERE id=' + id3.toString());
+               alert('调试信息：更新完毕');
+               discontent();
+
+         });
+         }
+
+
+         
+         
+      </script>
+      
+   </head>
+   
+   <body>
+      <script type="text/javascript">
+         window.onload=function()//用window的onload事件，窗体加载完毕的时候
+         {
+            discontent();
+         }
+      </script>
+      
+      <center><div id="status" name="status" style="width: 1024px;text-align: left;"></div></center>
+   </body>
+
+   
+</html>
